@@ -90,6 +90,8 @@ section{padding:84px 0}
 .news h2{font-family:var(--serif);font-size:clamp(28px,3.4vw,42px);font-weight:900;margin-bottom:14px;position:relative}
 .news h2 em{font-style:italic;color:var(--gold2)}
 .news p{color:var(--muted);max-width:560px;margin:0 auto 28px;position:relative}
+.embedbox{position:relative;display:flex;justify-content:center;background:#fff;border-radius:16px;padding:8px;max-width:520px;margin:0 auto}
+.embedbox iframe{border-radius:10px}
 /* about */
 .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
 .about-grid h2{font-family:var(--serif);font-size:clamp(30px,3.6vw,44px);font-weight:900;margin:10px 0 18px}
@@ -119,12 +121,12 @@ footer{border-top:1px solid var(--line);padding:44px 0;color:var(--muted);font-s
 </style>
 </head>
 <body>
-<div id="salebar">🚀 Launch sale — <b>30% off everything</b> with code <b>LAUNCH30</b> · ends Oct 26</div>
+<div id="salebar">🚀 Launch sale — <b>30% off everything</b> with code <b>LAUNCH30</b> · ends Nov 1</div>
 <nav>
   <div class="wrap nav-in">
     <a class="brand" href="#top">MD<span>WHITE</span></a>
     <div class="nav-links" id="navLinks">
-      <a href="#vault">The Vault</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#connect">Connect</a>
+      <a href="#vault">The Vault</a><a href="#writing">Writing</a><a href="#newsletter">Briefing</a><a href="#about">About</a><a href="#connect">Connect</a>
     </div>
     <a class="btn sm nav-cta" href="https://therealmdwhite.gumroad.com/l/cwtisi" target="_blank" rel="noopener">Free Starter Kit</a>
     <button id="menuBtn" aria-label="Menu">☰</button>
@@ -205,8 +207,11 @@ footer{border-top:1px solid var(--line);padding:44px 0;color:var(--muted);font-s
   <div class="wrap">
     <div class="news rv">
       <h2>Start with <em>free.</em></h2>
-      <p>The Syndicator's Capital-Raising Starter Kit — the exact frameworks for finding investors and funding deals. Free forever, no catch.</p>
-      <a class="btn" href="https://therealmdwhite.gumroad.com/l/cwtisi" target="_blank" rel="noopener">Get the free Starter Kit →</a>
+      <p>Join <b style="color:var(--gold2)">The War Room Briefing</b> — my weekly email for operators, investors, and deal-makers. One tactic, one real-world breakdown, zero fluff. Subscribe and the free Syndicator's Capital-Raising Starter Kit lands in your welcome email.</p>
+      <div class="embedbox">
+        <iframe src="https://therealmdwhite.substack.com/embed" width="480" height="320" style="width:100%;max-width:480px;height:320px;border:0;background:#fff" frameborder="0" scrolling="no" title="Subscribe to The War Room Briefing"></iframe>
+      </div>
+      <p style="margin:20px auto 0;font-size:13px">Rather skip the inbox? <a href="https://therealmdwhite.gumroad.com/l/cwtisi" target="_blank" rel="noopener" style="color:var(--gold2)">Grab the free Starter Kit directly →</a></p>
     </div>
   </div>
 </section>
@@ -261,7 +266,7 @@ groups.forEach(g=>{
   host.appendChild(grid);
 });
 // sale banner: LAUNCH30 runs through Oct 26, 2026
-if(Date.now()<new Date('2026-10-27T00:00:00-07:00').getTime()){
+if(Date.now()<new Date('2026-11-02T03:48:00-08:00').getTime()){
   document.getElementById('salebar').style.display='block';
 }
 // reveal on scroll
